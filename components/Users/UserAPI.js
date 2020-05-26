@@ -19,4 +19,8 @@ User.post("/isAuth", middleware, (req, res) => {
   services.isAuth(req, res);
 });
 
+User.post("/create", (req, res) => {
+  services.create(req.body, res);
+});
+
 module.exports = User;
