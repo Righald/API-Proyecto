@@ -24,14 +24,12 @@ Place.get("/:id", (req, res) => {
   services.oneplace(req.params, res);
 });
 
-Place.put("/", (req, res) => {
-  res.status(200).json({
-    message: "Metodo put",
-  });
+Place.put("/:id", middleware, (req, res) => {
+  services.updateplace(req.params, req.body, res);
 });
 
 Place.delete("/:id", middleware, (req, res) => {
-  services.delete(req.body, res);
+  services.deleteplace(req.params, res);
 });
 
 module.exports = Place;
