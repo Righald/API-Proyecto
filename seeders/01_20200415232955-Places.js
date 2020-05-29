@@ -25,6 +25,38 @@ module.exports = {
           description: "Centro comercial",
           userId: 1,
         },
+        {
+          name: "Kiosko",
+          image: "",
+          lat: 24.164456, 
+          lon: -110.316657,
+          description: "Kiosko Del Malecón De La Paz",
+          userId: 1,
+        },
+        {
+          name: "Parque UABCS",
+          image: "",
+          lat: 24.105636, 
+          lon: -110.316157,
+          description: "Parque deportivo de la Universidad Autónoma De Baja California Sur",
+          userId: 2,
+        },
+        {
+          name: "ITLP",
+          image: "",
+          lat: 24.119466, 
+          lon: -110.308117,
+          description: "Instituto Tecnológico De La Paz",
+          userId: 2,
+        },
+        {
+          name: "Sec. 17",
+          image: "",
+          lat: 24.130403, 
+          lon: -110.335981,
+          description: "Escuela Secundaria Técnica Número 17",
+          userId: 2,
+        },
       ],
       {}
     );
