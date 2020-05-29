@@ -10,6 +10,12 @@ module.exports = {
       "users",
       [
         {
+          name: "Sergio Rojas Noris",
+          email: "sergio.rojas.cch@gmail.com",
+          password: hashPassword("1234"),
+          birthday: "1995-08-10",
+        },
+        {
           name: "Miguel Parra García",
           email: "miguel.parra.uabcs@gmail.com",
           password: hashPassword("holamundo123"),

@@ -21,5 +21,5 @@ app.use("/usuarios", User.api);
 
 app.listen(3000, () => {
   // Set up
-  console.log("Servidor corriendo en puesto 3000");
+  console.log("Servidor corriendo en puerto 3000");
 });

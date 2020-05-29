@@ -13,7 +13,7 @@ Place.use(express.json());
 Place.use(cors());
 
 Place.get("/getAllPlaces", (req, res) => {
-  services.allplaces(req.body, res);
+  services.allplaces(req, res);
 });
 
 Place.post("/registerPlace", middleware, (req, res) => {

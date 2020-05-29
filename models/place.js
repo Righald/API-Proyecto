@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   Place.associate = function (models) {
     // belogsTo
     Place.belongsTo(models.User);
+    Place.hasMany(models.Rating);
   };
   return Place;
 };
