@@ -18,7 +18,7 @@ module.exports = async(req, res) => {
     		const user = jwt.verify(req.headers["authorization"], jwtConfig.privateKey);
     		req.userData = user;
 
-			const userplaces = await dal.findOne({
+			const userplaces = await dal.findAll({
 				where: {
 					userId: user.id,
 				},
