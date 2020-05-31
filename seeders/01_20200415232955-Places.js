@@ -11,7 +11,7 @@ module.exports = {
       [
         {
           name: "UABCS",
-          image: "",
+          image: "uabcs.jpg",
           lat: 24.105836,
           lon: -110.320266,
           description: "Universidad Autónoma de Baja California Sur",
@@ -19,7 +19,7 @@ module.exports = {
         },
         {
           name: "Galerías La Paz",
-          image: "",
+          image: "galerias.jpg",
           lat: 24.1175948,
           lon: -110.3376609,
           description: "Centro comercial",
@@ -27,7 +27,7 @@ module.exports = {
         },
         {
           name: "Kiosko",
-          image: "",
+          image: "kiosko.jpg",
           lat: 24.164456, 
           lon: -110.316657,
           description: "Kiosko Del Malecón De La Paz",
@@ -35,7 +35,7 @@ module.exports = {
         },
         {
           name: "Parque UABCS",
-          image: "",
+          image: "parque.jpg",
           lat: 24.105636, 
           lon: -110.316157,
           description: "Parque deportivo de la Universidad Autónoma De Baja California Sur",
@@ -43,7 +43,7 @@ module.exports = {
         },
         {
           name: "ITLP",
-          image: "",
+          image: "tec.jpg",
           lat: 24.119466, 
           lon: -110.308117,
           description: "Instituto Tecnológico De La Paz",
@@ -51,7 +51,7 @@ module.exports = {
         },
         {
           name: "Sec. 17",
-          image: "",
+          image: "17.jpg",
           lat: 24.130403, 
           lon: -110.335981,
           description: "Escuela Secundaria Técnica Número 17",

@@ -1,5 +1,7 @@
 const bcrypt = require("bcrypt");
 const jwtConfig = require("./jwtConfig");
+const storage = require("./storageConfig");
+
 module.exports = {
   /**
    * Esta funcion encripta contraseñas
@@ -19,4 +21,5 @@ module.exports = {
    * Configuración de los tokens
    */
   jwtConfig,
+  storage,
 };

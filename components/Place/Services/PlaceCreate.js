@@ -9,11 +9,13 @@
 */
 const dal = require("../PlaceDAL");
 
-module.exports = ({ name, image, lat, lon, description }, res) => {
-  if (name && image && lat && lon && description) {
-    dal.create({
+module.exports = (img, { name, lat, lon, description }, res) => {
+    const fname = img.filename;
+  
+  if (name && img && lat && lon && description) {
+      dal.create({
       name,
-      image,
+      fname,
       lat,
       lon,
       description,

@@ -7,7 +7,7 @@ const cors = require("cors");
 const services = require("./Services");
 const Place = express.Router();
 const middleware = require("../Middleware");
-
+const { storage } = require("../../libs/utils");
 Place.use(express.urlencoded({ extended: false }));
 Place.use(express.json());
 Place.use(cors());
@@ -16,15 +16,15 @@ Place.get("/getAllPlaces", (req, res) => {
   services.allplaces(req, res);
 });
 
-Place.post("/registerPlace", middleware, (req, res) => {
-  services.create(req.body, res);
+Place.post("/registerPlace", middleware, storage.upload.single("image"), (req, res) => {
+  services.create(req.file, req.body, res);
 });
 
 Place.get("/:id", (req, res) => {
   services.oneplace(req.params, res);
 });
 
-Place.put("/:id", middleware, (req, res) => {
+Place.put("/:id", middleware, storage.upload.single("image"), (req, res) => {
   services.updateplace(req.params, req.body, res);
 });
 
