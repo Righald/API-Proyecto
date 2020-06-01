@@ -1,4 +1,7 @@
 const dal = require("../PlaceDAL");
+const path = require('path');
+const express = require('express');
+const app = express();
 
 module.exports = async ({ id }, res) => {
 	
@@ -14,13 +17,16 @@ module.exports = async ({ id }, res) => {
 		},
 	});
 	
+	
+	//const path = "../../../uploads/" + lugar.image;
+	//console.log(path);
+
 	if(lugar) 
 	{
 		status = 200;
-		response = {
-			place: lugar,
-			message: "Query Exitoso",
-		};
+		return res.sendFile(path.resolve(path.resolve(__dirname+'../../../../uploads/'+lugar.image)));
+
+		//return res.sendFile(__dirname + "../../../uploads/" + lugar.image);
 	}
 	
 	res.status(status).json(response);
