@@ -12,15 +12,16 @@ const { hashPassword } = require("../../../libs/utils");
 
 module.exports = async({ name, email, password, birthday }, res) => {
   
-  if (name && email && hash && birthday) 
-  {
-  	const hash = hashPassword(password);
-    
+  const hashed = hashPassword(password);
+  console.log(hashed);
+  
+  if (name && email && hashed && birthday) 
+  { 
     dal.create({
-      name,
-      email,
-      hash,
-      birthday,
+      name: name,
+      email: email,
+      password: hashed,
+      birthday: birthday,
     });
     
     res.status(200).json({
