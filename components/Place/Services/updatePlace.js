@@ -1,7 +1,7 @@
   const dal = require("../PlaceDAL");
   
   module.exports = async ({ id }, img,
-  { name, lat, lon, description, userId, qualification }, res) => {
+  { body, userData }, res) => {
 	
 	let status = 400;
   	let response = {
@@ -9,16 +9,17 @@
 	    parameters: ["name", "image", "lat", "lon", "description", "userId"],
   	};
 
-  	const fname = img.filename;
-
-  	if(id && name && img && lat && lon && description) 
+  	if(body.name && img && body.lat && body.lon && body.description) 
   	{
+  		const fname = img.filename;
+		
 		dal.update({
-		    name:name, 
-		    image:fname, 
-		    lat:lat, 
-		    lon:lon, 
-		    description:description,
+	      name: body.name,
+	      image: fname,
+	      lat: body.lat,
+	      lon: body.lon,
+	      description: body.description,
+	      userId: userData.id,
 	  	}, {
 	        where: {
 	            id:id

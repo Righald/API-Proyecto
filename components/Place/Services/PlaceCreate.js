@@ -10,12 +10,10 @@
 const dal = require("../PlaceDAL");
 
 module.exports = (img, {body, userData}, res) => {
-    
-  const fname = img.filename;
-  
   console.log(userData.id);
 
   if (body.name && img && body.lat && body.lon && body.description) {
+      const fname = img.filename;
       
       dal.create({
       name: body.name,

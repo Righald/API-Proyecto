@@ -25,7 +25,7 @@ Place.get("/:id", (req, res) => {
 });
 
 Place.put("/:id", middleware, storage.upload.single("image"), (req, res) => {
-  services.updateplace(req.params, req.body, res);
+  services.updateplace(req.params, req, res);
 });
 
 Place.delete("/:id", middleware, (req, res) => {
