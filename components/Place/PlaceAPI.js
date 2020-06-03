@@ -17,7 +17,7 @@ Place.get("/getAllPlaces", (req, res) => {
 });
 
 Place.post("/registerPlace", middleware, storage.upload.single("image"), (req, res) => {
-  services.create(req.file, req.body, res);
+  services.create(req.file, req, res);
 });
 
 Place.get("/:id", (req, res) => {

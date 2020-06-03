@@ -13,7 +13,7 @@ const { hashPassword } = require("../../../libs/utils");
 module.exports = async({ name, email, password, birthday }, res) => {
   
   const hashed = hashPassword(password);
-  console.log(hashed);
+  //console.log(hashed);
   
   if (name && email && hashed && birthday) 
   { 

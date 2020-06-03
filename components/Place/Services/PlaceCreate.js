@@ -9,20 +9,27 @@
 */
 const dal = require("../PlaceDAL");
 
-module.exports = (img, { name, lat, lon, description }, res) => {
-    const fname = img.filename;
+module.exports = (img, {body, userData}, res) => {
+    
+  const fname = img.filename;
   
-  if (name && img && lat && lon && description) {
+  console.log(userData.id);
+
+  if (body.name && img && body.lat && body.lon && body.description) {
+      
       dal.create({
-      name,
-      fname,
-      lat,
-      lon,
-      description,
+      name: body.name,
+      image: fname,
+      lat: body.lat,
+      lon: body.lon,
+      description: body.description,
+      userId: userData.id,
     });
+    
     res.status(200).json({
       message: "Lugar creado",
     });
+  
   } else {
     res.status(400).json({
       message: "No se enviaron correctamente los parametros.",
